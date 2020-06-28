@@ -5,7 +5,7 @@ r20export ZSH ${XDG_X_BUILD}/__omzsh__
 #--------------------------------------------------
 [ -d $ZSH ] || {
     echo INSTALLING OMZSH
-    $(dirname $(grealpath $0))/vendor/install.sh --unattended
+    ${ZDOTDIR}/vendor/omzsh_install.sh --unattended
 }
 #--------------------------------------------------
 # Configure OMZSH

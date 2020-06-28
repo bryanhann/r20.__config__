@@ -1,0 +1,9 @@
+[[ -z  ${R20_INIT_PID} ]] && {
+    r20export R20_INIT_PID      $$
+    r20export R20_INIT_TMP      /tmp/r20.${R20_INIT_PID}
+    r20export R20_INIT_BIN      /tmp/r20.${R20_INIT_PID}/bin
+    r20export R20_DEPTH         -1
+    mkdir -p                    /tmp/r20.${R20_INIT_PID}/bin
+}
+r20export R20_DEPTH $(( $R20_DEPTH + 1 ))
+
